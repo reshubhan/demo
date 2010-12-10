@@ -1,0 +1,18 @@
+%strong Your Order Details:- 
+
+
+%table
+%tr
+%th Name
+%th Price
+-@data.each do |k,v|
+    %br
+    %td
+    %td=k
+    %td=v
+    %br
+%br
+%th Total Price
+=@price
+%br
+=link_to "item list",items_path

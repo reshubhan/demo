@@ -1,0 +1,16 @@
+%h1 Listing items
+-form_tag(selected_items_path, :method => 'get') do
+    %table
+    %tr
+    %th Name
+    %th Price
+    -@items.each do |item|
+        %tr
+        %br
+        %td
+            %input{:type=>"checkbox", :name=>"item[]", :value=>"#{item.name}_#{item.price}"}
+        %td=item.name
+        %td=item.price
+        %br
+    =link_to "new items",new_item_path
+    =submit_tag("place order")

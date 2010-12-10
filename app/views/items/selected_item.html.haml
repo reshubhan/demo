@@ -1,0 +1,14 @@
+%h1 Selected items
+
+%table
+%tr
+%th Name
+%th Price
+-@selected_items.each do |k,v|
+    %br
+    %td
+    %td=k
+    %td=v
+    %br
+%br
+=link_to "place order",place_order_path
