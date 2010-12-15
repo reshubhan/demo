@@ -10,6 +10,16 @@ class ItemsController < ApplicationController
     end
   end
 
+
+  def update_div
+    render(:update) do |page|
+      sleep 5
+      page.replace_html "update_div" ,:partial => "update_partial"
+    end
+
+  end
+
+
   def selected_item
     price=0
     if params[:item]

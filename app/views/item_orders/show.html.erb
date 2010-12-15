@@ -1,0 +1,13 @@
+<p>
+  <b>Order:</b>
+  <%=h @item_order.order_id %>
+</p>
+
+<p>
+  <b>Item:</b>
+  <%=h @item_order.item_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_order_path(@item_order) %> |
+<%= link_to 'Back', item_orders_path %>

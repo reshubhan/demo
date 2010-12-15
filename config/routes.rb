@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :item_orders
+
   map.resources :orders
 
   map.resources :items
@@ -10,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.back_to_login "/user_sessions/new" ,:controller => "user_sessions",:action =>"back_to_login"
   map.selected_items "/selected_item" ,:controller => "items",:action =>"selected_item"
+  map.update_div "/update_div" ,:controller => "items",:action =>"update_div"
   map.place_order "/place_order" ,:controller => "items",:action =>"place_order"
   map.order_details "/order_details" ,:controller => "orders",:action =>"order_details"
   map.destroy_session "/" ,:controller => "user_sessions",:action =>"destroy_session"
