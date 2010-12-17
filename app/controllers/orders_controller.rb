@@ -15,7 +15,13 @@ class OrdersController < ApplicationController
   def order_details
     @orders=Order.last
     @price=@orders.total_price
-    @data=YAML::load(@orders.orders_details){|item| puts item.inspect}
+    @data={}
+   # @data=YAML::load(@orders.orders_details){|item| puts item.inspect}
+    items=@orders.item_orders
+    items.each do |item|
+      @it=Item.find_by_id(item.item_id)
+    @data[@it.name]=@it.price
+    end
     @data
   end
 

@@ -39667,3 +39667,2037 @@ Migrating to CreateItemOrders (20101215134049)
   [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
   [4;35;1mSQL (0.4ms)[0m   [0mdescribe `users`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy_session (for 127.0.0.1 at 2010-12-16 10:27:05) [GET]
+  Parameters: {"action"=>"destroy_session", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (14.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 04:57:05', `perishable_token` = 'qcWMtORwrTJV5cfWDkk', `last_request_at` = '2010-12-16 04:57:05' WHERE `id` = 1[0m
+  [4;36;1mSQL (40.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 147ms (DB: 56) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-12-16 10:27:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+Completed in 110ms (View: 96, DB: 1) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-12-16 10:27:32) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"amar"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'amar') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 04:57:32', `perishable_token` = 'UtTKH9PyxlywgutLTKJp', `last_login_at` = '2010-12-15 12:13:01', `current_login_at` = '2010-12-16 04:57:32', `login_count` = 12, `last_request_at` = '2010-12-16 04:57:32' WHERE `id` = 1[0m
+  [4;36;1mSQL (37.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 220ms (DB: 39) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-12-16 10:27:32) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 04:57:32', `perishable_token` = 'KnawNp8l9umLAQBWQJN', `last_request_at` = '2010-12-16 04:57:32' WHERE `id` = 1[0m
+  [4;35;1mSQL (36.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/items
+Rendering users/show
+Completed in 88ms (View: 29, DB: 38) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 10:27:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 04:57:35', `perishable_token` = 'HjwepmIfvwdzUA2glkjG', `last_request_at` = '2010-12-16 04:57:35' WHERE `id` = 1[0m
+  [4;36;1mSQL (32.5ms)[0m   [0;1mCOMMIT[0m
+Completed in 156ms (View: 90, DB: 35) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#update_div (for 127.0.0.1 at 2010-12-16 10:27:38) [POST]
+  Parameters: {"action"=>"update_div", "controller"=>"items"}
+Rendered items/_update_partial (2.4ms)
+Completed in 5011ms (View: 5009, DB: 0) | 200 OK [http://localhost/update_div]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 10:27:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 04:57:44', `perishable_token` = 'JBW9JXl1y69mThOozOyi', `last_request_at` = '2010-12-16 04:57:44' WHERE `id` = 1[0m
+  [4;35;1mSQL (25.9ms)[0m   [0mCOMMIT[0m
+Completed in 58ms (View: 24, DB: 28) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 10:40:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:10:49', `perishable_token` = 'pmnqve9KtbuVteAlZn', `last_request_at` = '2010-12-16 05:10:49' WHERE `id` = 1[0m
+  [4;36;1mSQL (44.1ms)[0m   [0;1mCOMMIT[0m
+Completed in 76ms (View: 23, DB: 46) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 10:40:56) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["Potato_12", "Tomato_53"]}
+  [4;35;1mOrder Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:10:56', 65, '2010-12-16 05:10:56', '--- \nTomato: \"53\"\nPotato: \"12\"\n')[0m
+  [4;36;1mSQL (51.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:10:56', `perishable_token` = '7yup9nzlgg5HntUJs7ZB', `last_request_at` = '2010-12-16 05:10:56' WHERE `id` = 1[0m
+  [4;35;1mSQL (34.8ms)[0m   [0mCOMMIT[0m
+Completed in 128ms (View: 31, DB: 88) | 200 OK [http://localhost/selected_item?item%5B%5D=Potato_12&item%5B%5D=Tomato_53&commit=place+order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 10:46:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:16:48', `perishable_token` = 'Dpc5zxKIQ77AlyPAunvC', `last_request_at` = '2010-12-16 05:16:48' WHERE `id` = 1[0m
+  [4;36;1mSQL (39.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 81ms (View: 32, DB: 43) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 10:47:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:17:30', `perishable_token` = 'TY6gwS6uzrjNGClot0vz', `last_request_at` = '2010-12-16 05:17:30' WHERE `id` = 1[0m
+  [4;35;1mSQL (32.9ms)[0m   [0mCOMMIT[0m
+Completed in 64ms (View: 23, DB: 35) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 10:47:38) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["Potato_12_4", "amar_23_7", "amar1_78_8"]}
+  [4;36;1mOrder Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:17:38', NULL, '2010-12-16 05:17:38', NULL)[0m
+  [4;35;1mSQL (28.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:17:38', 113, '2010-12-16 05:17:38', '--- \namar1: \"78\"\namar: \"23\"\nPotato: \"12\"\n')[0m
+  [4;36;1mSQL (29.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItemOrder Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:17:38', 21, '2010-12-16 05:17:38', NULL)[0m
+  [4;36;1mSQL (32.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:17:38', 21, '2010-12-16 05:17:38', NULL)[0m
+  [4;35;1mSQL (30.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:17:38', 21, '2010-12-16 05:17:38', NULL)[0m
+  [4;36;1mSQL (30.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:17:38', 21, '2010-12-16 05:17:38', NULL)[0m
+  [4;35;1mSQL (30.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:17:38', `perishable_token` = '2BtdRIuXYSB5IGj55cYs', `last_request_at` = '2010-12-16 05:17:38' WHERE `id` = 1[0m
+  [4;36;1mSQL (29.9ms)[0m   [0;1mCOMMIT[0m
+Completed in 283ms (View: 28, DB: 217) | 200 OK [http://localhost/selected_item?item%5B%5D=Potato_12_4&item%5B%5D=amar_23_7&item%5B%5D=amar1_78_8&commit=place+order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM `orders` ORDER BY orders.id DESC LIMIT 1[0m
+  [4;35;1mOrder Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `orders` ORDER BY orders.id DESC LIMIT 1[0m
+  [4;35;1mItemOrder Load (0.3ms)[0m   [0mSELECT * FROM `item_orders` WHERE (`item_orders`.order_id = 21) [0m
+  [4;36;1mItemOrder Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#place_order (for 127.0.0.1 at 2010-12-16 10:48:32) [GET]
+  Parameters: {"action"=>"place_order", "controller"=>"items"}
+Rendering template within layouts/items
+Rendering items/place_order
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:18:32', `perishable_token` = 'gjBque7rHgKDR6bPeEQx', `last_request_at` = '2010-12-16 05:18:32' WHERE `id` = 1[0m
+  [4;35;1mSQL (31.4ms)[0m   [0mCOMMIT[0m
+Completed in 56ms (View: 21, DB: 33) | 200 OK [http://localhost/place_order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#order_details (for 127.0.0.1 at 2010-12-16 10:48:34) [GET]
+  Parameters: {"action"=>"order_details", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `orders` ORDER BY orders.id DESC LIMIT 1[0m
+  [4;35;1mOrder Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+Rendering template within layouts/orders
+Rendering orders/order_details
+Completed in 82ms (View: 73, DB: 1) | 200 OK [http://localhost/order_details]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 10:48:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:18:41', `perishable_token` = '4Uaj9va88NC8mQQ2ay', `last_request_at` = '2010-12-16 05:18:41' WHERE `id` = 1[0m
+  [4;36;1mSQL (35.9ms)[0m   [0;1mCOMMIT[0m
+Completed in 65ms (View: 21, DB: 38) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 10:49:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:19:13', `perishable_token` = 'KJJEFAtfbD5k8PKPKJvc', `last_request_at` = '2010-12-16 05:19:13' WHERE `id` = 1[0m
+  [4;35;1mSQL (43.1ms)[0m   [0mCOMMIT[0m
+Completed in 129ms (View: 79, DB: 45) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 10:49:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:19:13', `perishable_token` = 'ABDeulkKmq5Gxm4S7sWa', `last_request_at` = '2010-12-16 05:19:13' WHERE `id` = 1[0m
+  [4;36;1mSQL (34.8ms)[0m   [0;1mCOMMIT[0m
+Completed in 64ms (View: 22, DB: 37) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 10:49:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:19:13', `perishable_token` = 'o8tG84IDvz4GvQQODjzF', `last_request_at` = '2010-12-16 05:19:13' WHERE `id` = 1[0m
+  [4;35;1mSQL (30.6ms)[0m   [0mCOMMIT[0m
+Completed in 118ms (View: 79, DB: 32) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 10:49:19) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["grapes_30_1", "mango_20_2", "apple_45_3", "Potato_12_4"]}
+  [4;36;1mOrder Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:19:19', NULL, '2010-12-16 05:19:19', NULL)[0m
+  [4;35;1mSQL (37.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:19:19', 107, '2010-12-16 05:19:19', '--- \napple: \"45\"\nmango: \"20\"\ngrapes: \"30\"\nPotato: \"12\"\n')[0m
+  [4;36;1mSQL (28.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItemOrder Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:19:19', 23, '2010-12-16 05:19:19', NULL)[0m
+  [4;36;1mSQL (24.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:19:19', 23, '2010-12-16 05:19:19', NULL)[0m
+  [4;35;1mSQL (22.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:19:19', 23, '2010-12-16 05:19:19', NULL)[0m
+  [4;36;1mSQL (22.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:19:20', 23, '2010-12-16 05:19:20', NULL)[0m
+  [4;35;1mSQL (22.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:19:20', `perishable_token` = 'tIekLrSVyhvFbussG3p', `last_request_at` = '2010-12-16 05:19:20' WHERE `id` = 1[0m
+  [4;36;1mSQL (32.1ms)[0m   [0;1mCOMMIT[0m
+Completed in 250ms (View: 26, DB: 194) | 200 OK [http://localhost/selected_item?item%5B%5D=grapes_30_1&item%5B%5D=mango_20_2&item%5B%5D=apple_45_3&item%5B%5D=Potato_12_4&commit=place+order]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#place_order (for 127.0.0.1 at 2010-12-16 10:49:23) [GET]
+  Parameters: {"action"=>"place_order", "controller"=>"items"}
+Rendering template within layouts/items
+Rendering items/place_order
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:19:23', `perishable_token` = 'tSHqeHDcboTXgFODg6', `last_request_at` = '2010-12-16 05:19:23' WHERE `id` = 1[0m
+  [4;35;1mSQL (51.7ms)[0m   [0mCOMMIT[0m
+Completed in 73ms (View: 17, DB: 53) | 200 OK [http://localhost/place_order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#order_details (for 127.0.0.1 at 2010-12-16 10:49:26) [GET]
+  Parameters: {"action"=>"order_details", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM `orders` ORDER BY orders.id DESC LIMIT 1[0m
+  [4;35;1mOrder Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+Rendering template within layouts/orders
+Rendering orders/order_details
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/order_details]
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` ORDER BY orders.id DESC LIMIT 1[0m
+  [4;36;1mItemOrder Load (0.3ms)[0m   [0;1mSELECT * FROM `item_orders` WHERE (`item_orders`.order_id = 23) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy_session (for 127.0.0.1 at 2010-12-16 10:55:59) [GET]
+  Parameters: {"action"=>"destroy_session", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:25:59', `perishable_token` = 'ib5O9378ImLFQUeESsI', `last_request_at` = '2010-12-16 05:25:59' WHERE `id` = 1[0m
+  [4;36;1mSQL (28.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 50ms (DB: 30) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-12-16 10:55:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-12-16 10:56:06) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "login"=>"amar"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'amar') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:26:06', `perishable_token` = 'XCaaxQAxOfHHgeqMW67X', `last_login_at` = '2010-12-16 04:57:32', `current_login_at` = '2010-12-16 05:26:06', `login_count` = 13, `last_request_at` = '2010-12-16 05:26:06' WHERE `id` = 1[0m
+  [4;36;1mSQL (23.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 106ms (DB: 25) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.8ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-12-16 10:56:07) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:26:07', `perishable_token` = 'ZaUQsf2WP9fGlPbfRBI5', `last_request_at` = '2010-12-16 05:26:07' WHERE `id` = 1[0m
+  [4;35;1mSQL (20.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/items
+Rendering users/show
+Completed in 49ms (View: 4, DB: 22) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 10:56:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:26:08', `perishable_token` = 'X4GB3bAjdFUkn0Ao2T5', `last_request_at` = '2010-12-16 05:26:08' WHERE `id` = 1[0m
+  [4;36;1mSQL (38.2ms)[0m   [0;1mCOMMIT[0m
+Completed in 67ms (View: 21, DB: 40) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 10:56:18) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["Potato_12_4", "Tomato_53_5"]}
+  [4;35;1mOrder Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:26:18', NULL, '2010-12-16 05:26:18', NULL)[0m
+  [4;36;1mSQL (36.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:26:18', 65, '2010-12-16 05:26:18', '--- \nTomato: \"53\"\nPotato: \"12\"\n')[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItemOrder Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:26:18', 25, '2010-12-16 05:26:18', NULL)[0m
+  [4;35;1mSQL (31.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:26:18', 25, '2010-12-16 05:26:18', NULL)[0m
+  [4;36;1mSQL (22.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:26:18', 25, '2010-12-16 05:26:18', NULL)[0m
+  [4;35;1mSQL (22.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:26:18', 25, '2010-12-16 05:26:18', NULL)[0m
+  [4;36;1mSQL (22.3ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:26:18', `perishable_token` = '6rfVulNLiePViQbH3pjT', `last_request_at` = '2010-12-16 05:26:18' WHERE `id` = 1[0m
+  [4;35;1mSQL (20.3ms)[0m   [0mCOMMIT[0m
+Completed in 296ms (View: 21, DB: 190) | 200 OK [http://localhost/selected_item?item%5B%5D=Potato_12_4&item%5B%5D=Tomato_53_5&commit=place+order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#place_order (for 127.0.0.1 at 2010-12-16 10:56:25) [GET]
+  Parameters: {"action"=>"place_order", "controller"=>"items"}
+Rendering template within layouts/items
+Rendering items/place_order
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:26:25', `perishable_token` = 'WPUOoZxW1Yjx5LPsdZz', `last_request_at` = '2010-12-16 05:26:25' WHERE `id` = 1[0m
+  [4;36;1mSQL (38.0ms)[0m   [0;1mCOMMIT[0m
+Completed in 59ms (View: 17, DB: 39) | 200 OK [http://localhost/place_order]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#order_details (for 127.0.0.1 at 2010-12-16 10:56:33) [GET]
+  Parameters: {"action"=>"order_details", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM `orders` ORDER BY orders.id DESC LIMIT 1[0m
+  [4;36;1mOrder Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mItemOrder Load (0.2ms)[0m   [0mSELECT * FROM `item_orders` WHERE (`item_orders`.order_id = 25) [0m
+  [4;36;1mItemOrder Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+
+NoMethodError (undefined method `name' for #<ItemOrder:0xb6bfb7b8>):
+  app/controllers/orders_controller.rb:22:in `order_details'
+  app/controllers/orders_controller.rb:21:in `order_details'
+  haml (3.0.24) [v] rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.4ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#order_details (for 127.0.0.1 at 2010-12-16 10:57:20) [GET]
+  Parameters: {"action"=>"order_details", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` ORDER BY orders.id DESC LIMIT 1[0m
+  [4;36;1mOrder Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mItemOrder Load (0.1ms)[0m   [0mSELECT * FROM `item_orders` WHERE (`item_orders`.order_id = 25) [0m
+  [4;36;1mItemOrder Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+
+NoMethodError (undefined method `name' for #<ItemOrder:0xb6cbf85c>):
+  app/controllers/orders_controller.rb:24:in `order_details'
+  app/controllers/orders_controller.rb:22:in `order_details'
+  haml (3.0.24) [v] rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy_session (for 127.0.0.1 at 2010-12-16 10:59:36) [GET]
+  Parameters: {"action"=>"destroy_session", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:29:36', `perishable_token` = 'ILnjflrGu5u1LGx4s9FR', `last_request_at` = '2010-12-16 05:29:36' WHERE `id` = 1[0m
+  [4;35;1mSQL (38.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 116ms (DB: 39) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-12-16 10:59:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+Completed in 20ms (View: 4, DB: 1) | 200 OK [http://localhost/user_session/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-12-16 10:59:42) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"amar"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'amar') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:29:42', `perishable_token` = 'uB8agLY2p0ggiEa1ogb', `last_login_at` = '2010-12-16 05:26:06', `current_login_at` = '2010-12-16 05:29:42', `login_count` = 14, `last_request_at` = '2010-12-16 05:29:42' WHERE `id` = 1[0m
+  [4;35;1mSQL (35.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 57ms (DB: 37) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-12-16 10:59:42) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:29:42', `perishable_token` = 'qlJCtptk1tBsR8XqGjHm', `last_request_at` = '2010-12-16 05:29:42' WHERE `id` = 1[0m
+  [4;36;1mSQL (46.8ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/items
+Rendering users/show
+Completed in 72ms (View: 3, DB: 48) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 10:59:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:29:44', `perishable_token` = '11hR1rPLV6iryrTiYKeY', `last_request_at` = '2010-12-16 05:29:44' WHERE `id` = 1[0m
+  [4;35;1mSQL (39.7ms)[0m   [0mCOMMIT[0m
+Completed in 73ms (View: 25, DB: 42) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 10:59:50) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["Potato_12_4", "Tomato_53_5"]}
+  [4;36;1mOrder Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:29:50', NULL, '2010-12-16 05:29:50', NULL)[0m
+  [4;35;1mSQL (62.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:29:51', 65, '2010-12-16 05:29:51', '--- \nTomato: \"53\"\nPotato: \"12\"\n')[0m
+  [4;36;1mSQL (21.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItemOrder Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:29:51', 27, '2010-12-16 05:29:51', NULL)[0m
+  [4;36;1mSQL (24.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:29:51', 27, '2010-12-16 05:29:51', NULL)[0m
+  [4;35;1mSQL (22.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:29:51', 27, '2010-12-16 05:29:51', NULL)[0m
+  [4;36;1mSQL (22.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:29:51', 27, '2010-12-16 05:29:51', NULL)[0m
+  [4;35;1mSQL (31.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:29:51', `perishable_token` = '0eqzjsH7b7VK6PEZfah', `last_request_at` = '2010-12-16 05:29:51' WHERE `id` = 1[0m
+  [4;36;1mSQL (27.5ms)[0m   [0;1mCOMMIT[0m
+Completed in 276ms (View: 30, DB: 216) | 200 OK [http://localhost/selected_item?item%5B%5D=Potato_12_4&item%5B%5D=Tomato_53_5&commit=place+order]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:01:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:31:14', `perishable_token` = 'l3R2qkmVFwyS3IKNsXy', `last_request_at` = '2010-12-16 05:31:14' WHERE `id` = 1[0m
+  [4;35;1mSQL (47.4ms)[0m   [0mCOMMIT[0m
+Completed in 80ms (View: 24, DB: 49) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:01:20) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["Potato_12_4", "Tomato_53_5"]}
+  [4;36;1mOrder Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:31:20', NULL, '2010-12-16 05:31:20', NULL)[0m
+  [4;35;1mSQL (41.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:31:20', 65, '2010-12-16 05:31:20', '--- \nTomato: \"53\"\nPotato: \"12\"\n')[0m
+  [4;36;1mSQL (30.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItemOrder Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:31:20', 29, '2010-12-16 05:31:20', 116)[0m
+  [4;36;1mSQL (32.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:31:20', 29, '2010-12-16 05:31:20', 109)[0m
+  [4;35;1mSQL (22.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:31:20', `perishable_token` = 'fbBcMVuLl6PwTnShfsi', `last_request_at` = '2010-12-16 05:31:20' WHERE `id` = 1[0m
+  [4;36;1mSQL (23.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 203ms (View: 26, DB: 154) | 200 OK [http://localhost/selected_item?item%5B%5D=Potato_12_4&item%5B%5D=Tomato_53_5&commit=place+order]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:03:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:33:11', `perishable_token` = 'YWGhZ0Zp9P5yYcPA39Ho', `last_request_at` = '2010-12-16 05:33:11' WHERE `id` = 1[0m
+  [4;35;1mSQL (34.3ms)[0m   [0mCOMMIT[0m
+Completed in 122ms (View: 24, DB: 36) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:03:17) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["amar_23_6", "amar_23_7"]}
+  [4;36;1mOrder Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:33:17', NULL, '2010-12-16 05:33:17', NULL)[0m
+  [4;35;1mSQL (36.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:33:17', 46, '2010-12-16 05:33:17', '--- \namar: \"23\"\n')[0m
+  [4;36;1mSQL (29.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItemOrder Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.1ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:33:17', 31, '2010-12-16 05:33:17', 97)[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:33:17', 31, '2010-12-16 05:33:17', 97)[0m
+  [4;35;1mSQL (31.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:33:18', `perishable_token` = 'A52cQ0aLFC7Q5oMbJZum', `last_request_at` = '2010-12-16 05:33:18' WHERE `id` = 1[0m
+  [4;36;1mSQL (29.6ms)[0m   [0;1mCOMMIT[0m
+Completed in 215ms (View: 28, DB: 164) | 200 OK [http://localhost/selected_item?item%5B%5D=amar_23_6&item%5B%5D=amar_23_7&commit=place+order]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:04:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:34:03', `perishable_token` = 'TxdR21a5G1XPQ1SUSIw', `last_request_at` = '2010-12-16 05:34:03' WHERE `id` = 1[0m
+  [4;35;1mSQL (38.4ms)[0m   [0mCOMMIT[0m
+Completed in 126ms (View: 80, DB: 40) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:04:11) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["grapes_30_1", "mango_20_2"]}
+  [4;36;1mOrder Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:34:11', NULL, '2010-12-16 05:34:11', NULL)[0m
+  [4;35;1mSQL (32.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:34:11', 50, '2010-12-16 05:34:11', '--- \nmango: \"20\"\ngrapes: \"30\"\n')[0m
+  [4;36;1mSQL (30.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItemOrder Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:34:11', 33, '2010-12-16 05:34:11', 1)[0m
+  [4;36;1mSQL (32.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:34:11', 33, '2010-12-16 05:34:11', 2)[0m
+  [4;35;1mSQL (30.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:34:11', `perishable_token` = 'bKN7XJVG8nMV5DR3Hoc', `last_request_at` = '2010-12-16 05:34:11' WHERE `id` = 1[0m
+  [4;36;1mSQL (34.9ms)[0m   [0;1mCOMMIT[0m
+Completed in 211ms (View: 23, DB: 164) | 200 OK [http://localhost/selected_item?item%5B%5D=grapes_30_1&item%5B%5D=mango_20_2&commit=place+order]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:04:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:34:41', `perishable_token` = 'bYHIWIF78DSWPOBc', `last_request_at` = '2010-12-16 05:34:41' WHERE `id` = 1[0m
+  [4;35;1mSQL (38.0ms)[0m   [0mCOMMIT[0m
+Completed in 126ms (View: 80, DB: 40) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:11:57) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["grapes_30_1", "mango_20_2", "apple_45_3", "Potato_12_4"]}
+  [4;36;1mOrder Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:41:57', NULL, '2010-12-16 05:41:57', NULL)[0m
+  [4;35;1mSQL (34.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:41:57', 107, '2010-12-16 05:41:57', '--- \napple: \"45\"\nmango: \"20\"\ngrapes: \"30\"\nPotato: \"12\"\n')[0m
+  [4;36;1mSQL (46.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItemOrder Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:41:57', 35, '2010-12-16 05:41:57', 1)[0m
+  [4;36;1mSQL (33.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:41:57', 35, '2010-12-16 05:41:57', 2)[0m
+  [4;35;1mSQL (30.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:41:57', 35, '2010-12-16 05:41:57', 3)[0m
+  [4;36;1mSQL (47.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:41:57', 35, '2010-12-16 05:41:57', 4)[0m
+  [4;35;1mSQL (30.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:41:57', `perishable_token` = 'rJUDCl4gL4iljqdlBLF9', `last_request_at` = '2010-12-16 05:41:57' WHERE `id` = 1[0m
+  [4;36;1mSQL (30.5ms)[0m   [0;1mCOMMIT[0m
+Completed in 313ms (View: 27, DB: 258) | 200 OK [http://localhost/selected_item?item%5B%5D=grapes_30_1&item%5B%5D=mango_20_2&item%5B%5D=apple_45_3&item%5B%5D=Potato_12_4&commit=place+order]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#place_order (for 127.0.0.1 at 2010-12-16 11:11:59) [GET]
+  Parameters: {"action"=>"place_order", "controller"=>"items"}
+Rendering template within layouts/items
+Rendering items/place_order
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:41:59', `perishable_token` = 'EhrnNjB4AxSKByfhatSI', `last_request_at` = '2010-12-16 05:41:59' WHERE `id` = 1[0m
+  [4;35;1mSQL (44.0ms)[0m   [0mCOMMIT[0m
+Completed in 123ms (View: 75, DB: 45) | 200 OK [http://localhost/place_order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#order_details (for 127.0.0.1 at 2010-12-16 11:12:00) [GET]
+  Parameters: {"action"=>"order_details", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM `orders` ORDER BY orders.id DESC LIMIT 1[0m
+  [4;35;1mOrder Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mItemOrder Load (0.2ms)[0m   [0;1mSELECT * FROM `item_orders` WHERE (`item_orders`.order_id = 35) [0m
+  [4;35;1mItemOrder Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) LIMIT 1[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 2) LIMIT 1[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) LIMIT 1[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 4) LIMIT 1[0m
+Rendering template within layouts/orders
+Rendering orders/order_details
+Completed in 22ms (View: 2, DB: 2) | 200 OK [http://localhost/order_details]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:12:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:42:02', `perishable_token` = '9mTIrJ0durtOXrSVVWy', `last_request_at` = '2010-12-16 05:42:02' WHERE `id` = 1[0m
+  [4;35;1mSQL (43.6ms)[0m   [0mCOMMIT[0m
+Completed in 72ms (View: 21, DB: 45) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:12:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:42:49', `perishable_token` = 'vLFEE7FBALpkznob64tv', `last_request_at` = '2010-12-16 05:42:49' WHERE `id` = 1[0m
+  [4;36;1mSQL (37.7ms)[0m   [0;1mCOMMIT[0m
+Completed in 70ms (View: 24, DB: 40) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:12:53) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["grapes_30_1", "mango_20_2", "apple_45_3", "Potato_12_4"]}
+  [4;35;1mOrder Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.1ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:42:53', NULL, '2010-12-16 05:42:53', NULL)[0m
+  [4;36;1mSQL (35.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`, `orders_details`) VALUES('2010-12-16 05:42:53', 107, '2010-12-16 05:42:53', '--- \napple: \"45\"\nmango: \"20\"\ngrapes: \"30\"\nPotato: \"12\"\n')[0m
+  [4;35;1mSQL (30.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItemOrder Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:42:53', 37, '2010-12-16 05:42:53', 1)[0m
+  [4;35;1mSQL (33.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:42:53', 37, '2010-12-16 05:42:53', 2)[0m
+  [4;36;1mSQL (30.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:42:53', 37, '2010-12-16 05:42:53', 3)[0m
+  [4;35;1mSQL (30.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 05:42:53', 37, '2010-12-16 05:42:53', 4)[0m
+  [4;36;1mSQL (30.4ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:42:53', `perishable_token` = 'eOsQPSu7Vur58rFmizFt', `last_request_at` = '2010-12-16 05:42:53' WHERE `id` = 1[0m
+  [4;35;1mSQL (35.5ms)[0m   [0mCOMMIT[0m
+Completed in 290ms (View: 31, DB: 231) | 200 OK [http://localhost/selected_item?item%5B%5D=grapes_30_1&item%5B%5D=mango_20_2&item%5B%5D=apple_45_3&item%5B%5D=Potato_12_4&commit=place+order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#place_order (for 127.0.0.1 at 2010-12-16 11:12:55) [GET]
+  Parameters: {"action"=>"place_order", "controller"=>"items"}
+Rendering template within layouts/items
+Rendering items/place_order
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:42:55', `perishable_token` = '3FAeHqgHQdQykrxpQJD', `last_request_at` = '2010-12-16 05:42:55' WHERE `id` = 1[0m
+  [4;36;1mSQL (38.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 62ms (View: 20, DB: 40) | 200 OK [http://localhost/place_order]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#order_details (for 127.0.0.1 at 2010-12-16 11:12:56) [GET]
+  Parameters: {"action"=>"order_details", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM `orders` ORDER BY orders.id DESC LIMIT 1[0m
+  [4;36;1mOrder Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mItemOrder Load (0.2ms)[0m   [0mSELECT * FROM `item_orders` WHERE (`item_orders`.order_id = 37) [0m
+  [4;36;1mItemOrder Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+  [4;35;1mItem Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 1) LIMIT 1[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 2) LIMIT 1[0m
+  [4;36;1mItem Load (0.0ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) LIMIT 1[0m
+  [4;35;1mItem Load (0.0ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 4) LIMIT 1[0m
+Rendering template within layouts/orders
+Rendering orders/order_details
+Completed in 21ms (View: 2, DB: 2) | 200 OK [http://localhost/order_details]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:12:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 05:42:58', `perishable_token` = 'CCyCYv0wGhGi9uhBdf', `last_request_at` = '2010-12-16 05:42:58' WHERE `id` = 1[0m
+  [4;36;1mSQL (50.8ms)[0m   [0;1mCOMMIT[0m
+Completed in 79ms (View: 21, DB: 53) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20101203045415)
+Migrating to CreateCategories (20101203112952)
+Migrating to CreateOrders (20101208100924)
+Migrating to CreateComments (20101209090416)
+Migrating to CreateUsers (20101209130425)
+Migrating to CreateItemOrders (20101215134049)
+Migrating to RemoveColumnOrderDetailsFrom (20101216054411)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Can't DROP 'order_details'; check that column/key exists: ALTER TABLE `orders` DROP `order_details`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20101203045415)
+Migrating to CreateCategories (20101203112952)
+Migrating to CreateOrders (20101208100924)
+Migrating to CreateComments (20101209090416)
+Migrating to CreateUsers (20101209130425)
+Migrating to CreateItemOrders (20101215134049)
+Migrating to RemoveColumnOrderDetailsFrom (20101216054411)
+  [4;36;1mSQL (273.2ms)[0m   [0;1mALTER TABLE `orders` DROP `orders_details`[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101216054411')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `item_orders`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `item_orders`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `items`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `items`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `orders`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `orders`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:16:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 05:46:44', `perishable_token` = 'qnBcGklXc0R5n9kca55s', `last_request_at` = '2010-12-16 05:46:44' WHERE `id` = 1[0m
+  [4;35;1mSQL (57.3ms)[0m   [0mCOMMIT[0m
+Completed in 89ms (View: 23, DB: 59) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:16:48) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["mango_20_2", "apple_45_3", "Potato_12_4"]}
+  [4;36;1mOrder Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 05:46:48', NULL, '2010-12-16 05:46:48')[0m
+  [4;35;1mSQL (38.1ms)[0m   [0mCOMMIT[0m
+
+ActiveRecord::UnknownAttributeError (unknown attribute: orders_details):
+  app/controllers/items_controller.rb:33:in `selected_item'
+  haml (3.0.24) [v] rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.7ms)
+Rendered rescues/_request_and_response (58.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:42:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:12:38', `perishable_token` = '2ufW0qtyUC8GvMjbWjxn', `last_request_at` = '2010-12-16 06:12:38' WHERE `id` = 1[0m
+  [4;36;1mSQL (45.0ms)[0m   [0;1mCOMMIT[0m
+Completed in 77ms (View: 23, DB: 47) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:42:45) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["apple_45_3", "Potato_12_4"]}
+  [4;35;1mOrder Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.1ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:12:45', NULL, '2010-12-16 06:12:45')[0m
+  [4;36;1mSQL (41.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:12:45', 57, '2010-12-16 06:12:45')[0m
+  [4;35;1mSQL (30.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItemOrder Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:12:45', 40, '2010-12-16 06:12:45', 3)[0m
+  [4;35;1mSQL (32.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:12:45', 40, '2010-12-16 06:12:45', 4)[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 06:12:46', `perishable_token` = 'o4YGWGOj7d8CNyeHXrW7', `last_request_at` = '2010-12-16 06:12:46' WHERE `id` = 1[0m
+  [4;35;1mSQL (30.7ms)[0m   [0mCOMMIT[0m
+Completed in 211ms (View: 19, DB: 171) | 200 OK [http://localhost/selected_item?item%5B%5D=apple_45_3&item%5B%5D=Potato_12_4&commit=place+order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:43:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:13:35', `perishable_token` = 'JsxhE6CfFdrLKLaUgdK', `last_request_at` = '2010-12-16 06:13:35' WHERE `id` = 1[0m
+  [4;36;1mSQL (44.9ms)[0m   [0;1mCOMMIT[0m
+Completed in 77ms (View: 24, DB: 47) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:43:46) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["apple_45_3", "Potato_12_4", "Tomato_53_5"]}
+  [4;35;1mOrder Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.1ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:13:46', NULL, '2010-12-16 06:13:46')[0m
+  [4;36;1mSQL (35.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:13:46', 110, '2010-12-16 06:13:46')[0m
+  [4;35;1mSQL (30.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItemOrder Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:13:46', 42, '2010-12-16 06:13:46', 3)[0m
+  [4;35;1mSQL (32.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:13:46', 42, '2010-12-16 06:13:46', 4)[0m
+  [4;36;1mSQL (30.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:13:46', 42, '2010-12-16 06:13:46', 5)[0m
+  [4;35;1mSQL (22.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:13:46', `perishable_token` = 'KP6wN3VJziL8pWhcsm', `last_request_at` = '2010-12-16 06:13:46' WHERE `id` = 1[0m
+  [4;36;1mSQL (21.2ms)[0m   [0;1mCOMMIT[0m
+Completed in 230ms (View: 28, DB: 177) | 200 OK [http://localhost/selected_item?item%5B%5D=apple_45_3&item%5B%5D=Potato_12_4&item%5B%5D=Tomato_53_5&commit=place+order]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#place_order (for 127.0.0.1 at 2010-12-16 11:44:11) [GET]
+  Parameters: {"action"=>"place_order", "controller"=>"items"}
+Rendering template within layouts/items
+Rendering items/place_order
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 06:14:11', `perishable_token` = 'n2F295QYNotAIXWYb', `last_request_at` = '2010-12-16 06:14:11' WHERE `id` = 1[0m
+  [4;35;1mSQL (63.5ms)[0m   [0mCOMMIT[0m
+Completed in 87ms (View: 20, DB: 65) | 200 OK [http://localhost/place_order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#order_details (for 127.0.0.1 at 2010-12-16 11:44:14) [GET]
+  Parameters: {"action"=>"order_details", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM `orders` ORDER BY orders.id DESC LIMIT 1[0m
+  [4;35;1mOrder Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mItemOrder Load (0.2ms)[0m   [0;1mSELECT * FROM `item_orders` WHERE (`item_orders`.order_id = 42) [0m
+  [4;35;1mItemOrder Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) LIMIT 1[0m
+  [4;36;1mItem Load (0.0ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 4) LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 5) LIMIT 1[0m
+Rendering template within layouts/orders
+Rendering orders/order_details
+Completed in 20ms (View: 2, DB: 2) | 200 OK [http://localhost/order_details]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#order_details (for 127.0.0.1 at 2010-12-16 11:45:11) [GET]
+  Parameters: {"action"=>"order_details", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `orders` ORDER BY orders.id DESC LIMIT 1[0m
+  [4;35;1mOrder Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mItemOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `item_orders` WHERE (`item_orders`.order_id = 42) [0m
+  [4;35;1mItemOrder Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.0ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 3) LIMIT 1[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 4) LIMIT 1[0m
+  [4;35;1mItem Load (0.0ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 5) LIMIT 1[0m
+Rendering template within layouts/orders
+Rendering orders/order_details
+Completed in 19ms (View: 2, DB: 2) | 200 OK [http://localhost/order_details]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:45:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:15:16', `perishable_token` = 'K6lLJJo6QHtosvnJgaj', `last_request_at` = '2010-12-16 06:15:16' WHERE `id` = 1[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 77ms (View: 24, DB: 46) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:45:23) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["Potato_12_4", "Tomato_53_5", "amar_23_6"]}
+  [4;35;1mOrder Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:15:23', NULL, '2010-12-16 06:15:23')[0m
+  [4;36;1mSQL (22.0ms)[0m   [0;1mCOMMIT[0m
+
+NameError (undefined local variable or method `price' for #<ItemsController:0xb6d7c998>):
+  app/controllers/items_controller.rb:31:in `selected_item'
+  app/controllers/items_controller.rb:28:in `each'
+  app/controllers/items_controller.rb:28:in `selected_item'
+  haml (3.0.24) [v] rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:45:37) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["Potato_12_4", "Tomato_53_5", "amar_23_6"]}
+  [4;35;1mOrder Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.1ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:15:37', NULL, '2010-12-16 06:15:37')[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:15:37', 88, '2010-12-16 06:15:37')[0m
+  [4;35;1mSQL (30.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItemOrder Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:15:37', 45, '2010-12-16 06:15:37', 4)[0m
+  [4;35;1mSQL (32.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:15:37', 45, '2010-12-16 06:15:37', 5)[0m
+  [4;36;1mSQL (30.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:15:37', 45, '2010-12-16 06:15:37', 6)[0m
+  [4;35;1mSQL (22.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:15:37', `perishable_token` = 'C7ZnvHTybyrZ4IvmgP8', `last_request_at` = '2010-12-16 06:15:37' WHERE `id` = 1[0m
+  [4;36;1mSQL (26.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 292ms (View: 32, DB: 178) | 200 OK [http://localhost/selected_item?item%5B%5D=Potato_12_4&item%5B%5D=Tomato_53_5&item%5B%5D=amar_23_6&commit=place+order]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#place_order (for 127.0.0.1 at 2010-12-16 11:45:44) [GET]
+  Parameters: {"action"=>"place_order", "controller"=>"items"}
+Rendering template within layouts/items
+Rendering items/place_order
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 06:15:44', `perishable_token` = '54g3PdwASetyo66z2y', `last_request_at` = '2010-12-16 06:15:44' WHERE `id` = 1[0m
+  [4;35;1mSQL (23.3ms)[0m   [0mCOMMIT[0m
+Completed in 44ms (View: 17, DB: 25) | 200 OK [http://localhost/place_order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#order_details (for 127.0.0.1 at 2010-12-16 11:45:46) [GET]
+  Parameters: {"action"=>"order_details", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM `orders` ORDER BY orders.id DESC LIMIT 1[0m
+  [4;35;1mOrder Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mItemOrder Load (0.2ms)[0m   [0;1mSELECT * FROM `item_orders` WHERE (`item_orders`.order_id = 45) [0m
+  [4;35;1mItemOrder Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 4) LIMIT 1[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 5) LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 6) LIMIT 1[0m
+Rendering template within layouts/orders
+Rendering orders/order_details
+Completed in 99ms (View: 2, DB: 2) | 200 OK [http://localhost/order_details]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:45:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:15:48', `perishable_token` = 'lQjktgoai0hyXfQbv100', `last_request_at` = '2010-12-16 06:15:48' WHERE `id` = 1[0m
+  [4;36;1mSQL (74.9ms)[0m   [0;1mCOMMIT[0m
+Completed in 106ms (View: 23, DB: 77) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:46:20) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["Potato_12_4", "Tomato_53_5", "amar_23_6", "amar_23_7"]}
+  [4;35;1mOrder Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:16:20', NULL, '2010-12-16 06:16:20')[0m
+  [4;36;1mSQL (37.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:16:20', 111, '2010-12-16 06:16:20')[0m
+  [4;35;1mSQL (30.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItemOrder Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:16:20', 47, '2010-12-16 06:16:20', 4)[0m
+  [4;35;1mSQL (41.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:16:20', 47, '2010-12-16 06:16:20', 5)[0m
+  [4;36;1mSQL (30.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:16:20', 47, '2010-12-16 06:16:20', 6)[0m
+  [4;35;1mSQL (30.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:16:20', 47, '2010-12-16 06:16:20', 7)[0m
+  [4;36;1mSQL (30.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 06:16:20', `perishable_token` = 'OgeBc3I4GG7xhGqyk5qh', `last_request_at` = '2010-12-16 06:16:20' WHERE `id` = 1[0m
+  [4;35;1mSQL (30.8ms)[0m   [0mCOMMIT[0m
+Completed in 282ms (View: 19, DB: 236) | 200 OK [http://localhost/selected_item?item%5B%5D=Potato_12_4&item%5B%5D=Tomato_53_5&item%5B%5D=amar_23_6&item%5B%5D=amar_23_7&commit=place+order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:46:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:16:56', `perishable_token` = 'awGuFxXJCtHu52giq0U', `last_request_at` = '2010-12-16 06:16:56' WHERE `id` = 1[0m
+  [4;36;1mSQL (43.2ms)[0m   [0;1mCOMMIT[0m
+Completed in 75ms (View: 23, DB: 45) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:47:05) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["ask4_3_9", "ask4_3_10"]}
+  [4;35;1mOrder Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.1ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:17:05', NULL, '2010-12-16 06:17:05')[0m
+  [4;36;1mSQL (31.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:17:05', 6, '2010-12-16 06:17:05')[0m
+  [4;35;1mSQL (31.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItemOrder Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:17:05', 49, '2010-12-16 06:17:05', 9)[0m
+  [4;35;1mSQL (32.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:17:05', 49, '2010-12-16 06:17:05', 10)[0m
+  [4;36;1mSQL (30.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 06:17:05', `perishable_token` = 'XJSUqj85l1YgdbF98CG', `last_request_at` = '2010-12-16 06:17:05' WHERE `id` = 1[0m
+  [4;35;1mSQL (35.1ms)[0m   [0mCOMMIT[0m
+Completed in 209ms (View: 23, DB: 165) | 200 OK [http://localhost/selected_item?item%5B%5D=ask4_3_9&item%5B%5D=ask4_3_10&commit=place+order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:48:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:18:10', `perishable_token` = 'vJC39ke2a5rrwF89CUsu', `last_request_at` = '2010-12-16 06:18:10' WHERE `id` = 1[0m
+  [4;36;1mSQL (30.2ms)[0m   [0;1mCOMMIT[0m
+Completed in 62ms (View: 23, DB: 32) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:48:21) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["Potato_12_4", "Tomato_53_5"]}
+  [4;35;1mOrder Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:18:21', NULL, '2010-12-16 06:18:21')[0m
+  [4;36;1mSQL (32.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:18:21', 65, '2010-12-16 06:18:21')[0m
+  [4;35;1mSQL (30.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItemOrder Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:18:21', 51, '2010-12-16 06:18:21', 4)[0m
+  [4;35;1mSQL (31.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:18:21', 51, '2010-12-16 06:18:21', 5)[0m
+  [4;36;1mSQL (30.9ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 06:18:21', `perishable_token` = 'f7fFPB9E8UpqEkTbK5', `last_request_at` = '2010-12-16 06:18:21' WHERE `id` = 1[0m
+  [4;35;1mSQL (35.8ms)[0m   [0mCOMMIT[0m
+Completed in 209ms (View: 22, DB: 165) | 200 OK [http://localhost/selected_item?item%5B%5D=Potato_12_4&item%5B%5D=Tomato_53_5&commit=place+order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:48:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:18:40', `perishable_token` = 'W8zk4bDo9c3qzmxVWn4u', `last_request_at` = '2010-12-16 06:18:40' WHERE `id` = 1[0m
+  [4;36;1mSQL (27.8ms)[0m   [0;1mCOMMIT[0m
+Completed in 60ms (View: 24, DB: 30) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:48:49) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["mango_20_2", "amar_23_6"]}
+  [4;35;1mOrder Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.1ms)[0m   [0mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:18:49', 43, '2010-12-16 06:18:49')[0m
+  [4;36;1mSQL (37.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItemOrder Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:18:49', 52, '2010-12-16 06:18:49', 2)[0m
+  [4;36;1mSQL (31.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:18:49', 52, '2010-12-16 06:18:49', 6)[0m
+  [4;35;1mSQL (38.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:18:49', `perishable_token` = 'Tqd9A2H5BCMl3jt3CXRy', `last_request_at` = '2010-12-16 06:18:49' WHERE `id` = 1[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 208ms (View: 30, DB: 156) | 200 OK [http://localhost/selected_item?item%5B%5D=mango_20_2&item%5B%5D=amar_23_6&commit=place+order]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:49:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 06:19:12', `perishable_token` = 'werMz1ieS86XIIk2IQoX', `last_request_at` = '2010-12-16 06:19:12' WHERE `id` = 1[0m
+  [4;35;1mSQL (38.9ms)[0m   [0mCOMMIT[0m
+Completed in 73ms (View: 26, DB: 41) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 11:49:17) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items", "item"=>["apple_45_3", "Potato_12_4", "Tomato_53_5", "amar_23_6"]}
+  [4;36;1mOrder Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 06:19:17', 133, '2010-12-16 06:19:17')[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItemOrder Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:19:17', 53, '2010-12-16 06:19:17', 3)[0m
+  [4;35;1mSQL (32.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:19:17', 53, '2010-12-16 06:19:17', 4)[0m
+  [4;36;1mSQL (30.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:19:17', 53, '2010-12-16 06:19:17', 5)[0m
+  [4;35;1mSQL (30.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItemOrder Create (0.2ms)[0m   [0mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 06:19:17', 53, '2010-12-16 06:19:17', 6)[0m
+  [4;36;1mSQL (30.8ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/items
+Rendering items/selected_item
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 06:19:17', `perishable_token` = 'nZ0zNtuA411ocwT9Rzt', `last_request_at` = '2010-12-16 06:19:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (28.2ms)[0m   [0mCOMMIT[0m
+Completed in 254ms (View: 29, DB: 201) | 200 OK [http://localhost/selected_item?item%5B%5D=apple_45_3&item%5B%5D=Potato_12_4&item%5B%5D=Tomato_53_5&item%5B%5D=amar_23_6&commit=place+order]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#place_order (for 127.0.0.1 at 2010-12-16 11:49:26) [GET]
+  Parameters: {"action"=>"place_order", "controller"=>"items"}
+Rendering template within layouts/items
+Rendering items/place_order
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:19:26', `perishable_token` = '8MGuoe6rYYU0o1cC04pp', `last_request_at` = '2010-12-16 06:19:26' WHERE `id` = 1[0m
+  [4;36;1mSQL (52.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 77ms (View: 21, DB: 54) | 200 OK [http://localhost/place_order]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#order_details (for 127.0.0.1 at 2010-12-16 11:49:32) [GET]
+  Parameters: {"action"=>"order_details", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM `orders` ORDER BY orders.id DESC LIMIT 1[0m
+  [4;36;1mOrder Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mItemOrder Load (0.2ms)[0m   [0mSELECT * FROM `item_orders` WHERE (`item_orders`.order_id = 53) [0m
+  [4;36;1mItemOrder Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 3) LIMIT 1[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 4) LIMIT 1[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 5) LIMIT 1[0m
+  [4;35;1mItem Load (0.0ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 6) LIMIT 1[0m
+Rendering template within layouts/orders
+Rendering orders/order_details
+Completed in 22ms (View: 2, DB: 2) | 200 OK [http://localhost/order_details]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:49:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:19:34', `perishable_token` = 'fB6Ils34AL6exa6m8Ie', `last_request_at` = '2010-12-16 06:19:34' WHERE `id` = 1[0m
+  [4;36;1mSQL (43.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 72ms (View: 21, DB: 45) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:50:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 06:20:46', `perishable_token` = 'DBgpmWJK7YtdEKgUgydz', `last_request_at` = '2010-12-16 06:20:46' WHERE `id` = 1[0m
+  [4;35;1mSQL (42.9ms)[0m   [0mCOMMIT[0m
+Completed in 75ms (View: 23, DB: 45) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:51:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:21:23', `perishable_token` = 'KIVOuv6xgBwu8NQUmmty', `last_request_at` = '2010-12-16 06:21:23' WHERE `id` = 1[0m
+  [4;36;1mSQL (37.5ms)[0m   [0;1mCOMMIT[0m
+Completed in 74ms (View: 29, DB: 39) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:51:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 06:21:26', `perishable_token` = '2382OVuF8KsqHsstBuUo', `last_request_at` = '2010-12-16 06:21:26' WHERE `id` = 1[0m
+  [4;35;1mSQL (36.6ms)[0m   [0mCOMMIT[0m
+Completed in 69ms (View: 24, DB: 38) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#update_div (for 127.0.0.1 at 2010-12-16 11:51:32) [POST]
+  Parameters: {"action"=>"update_div", "controller"=>"items"}
+Rendered items/_update_partial (0.3ms)
+Completed in 5004ms (View: 5002, DB: 0) | 200 OK [http://localhost/update_div]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:52:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:22:21', `perishable_token` = 'zDgawu6ZIhKzHoMih5C6', `last_request_at` = '2010-12-16 06:22:21' WHERE `id` = 1[0m
+  [4;36;1mSQL (54.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 148ms (View: 86, DB: 56) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:52:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 06:22:23', `perishable_token` = 'AZEBP44UpkkCc9Cqd3K', `last_request_at` = '2010-12-16 06:22:23' WHERE `id` = 1[0m
+  [4;35;1mSQL (43.2ms)[0m   [0mCOMMIT[0m
+Completed in 75ms (View: 23, DB: 45) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#update_div (for 127.0.0.1 at 2010-12-16 11:52:25) [POST]
+  Parameters: {"action"=>"update_div", "controller"=>"items"}
+Rendered items/_update_partial (0.3ms)
+Completed in 5004ms (View: 5002, DB: 0) | 200 OK [http://localhost/update_div]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:53:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:23:09', `perishable_token` = 'MWIrk1StfnCQhYRHa0IG', `last_request_at` = '2010-12-16 06:23:09' WHERE `id` = 1[0m
+  [4;36;1mSQL (30.7ms)[0m   [0;1mCOMMIT[0m
+Completed in 125ms (View: 87, DB: 33) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#update_div (for 127.0.0.1 at 2010-12-16 11:53:12) [POST]
+  Parameters: {"action"=>"update_div", "controller"=>"items"}
+Rendered items/_update_partial (0.3ms)
+Completed in 5004ms (View: 5002, DB: 0) | 200 OK [http://localhost/update_div]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 11:53:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 06:23:27', `perishable_token` = 'Vc1rXfi123ZnEat8dFs', `last_request_at` = '2010-12-16 06:23:27' WHERE `id` = 1[0m
+  [4;35;1mSQL (35.1ms)[0m   [0mCOMMIT[0m
+Completed in 74ms (View: 31, DB: 37) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#update_div (for 127.0.0.1 at 2010-12-16 11:53:29) [POST]
+  Parameters: {"action"=>"update_div", "controller"=>"items"}
+Rendered items/_update_partial (0.3ms)
+Completed in 5005ms (View: 5002, DB: 0) | 200 OK [http://localhost/update_div]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (254.5ms)[0m   [0;1mDROP DATABASE IF EXISTS `cart_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `cart_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.7ms)[0m   [0mCREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (66.0ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (58.7ms)[0m   [0mCREATE TABLE `item_orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `order_id` int(11), `item_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (58.0ms)[0m   [0mCREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `price` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (58.1ms)[0m   [0mCREATE TABLE `orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `total_price` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (56.9ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (66.3ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (176.2ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (31.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101216054411')[0m
+  [4;35;1mSQL (33.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101203112952')[0m
+  [4;36;1mSQL (50.2ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101215134049')[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101209130425')[0m
+  [4;36;1mSQL (33.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101208100924')[0m
+  [4;35;1mSQL (33.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101209090416')[0m
+  [4;36;1mSQL (33.3ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101203045415')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (259.4ms)[0m   [0;1mDROP DATABASE IF EXISTS `cart_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `cart_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (89.1ms)[0m   [0mCREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (82.8ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (66.1ms)[0m   [0mCREATE TABLE `item_orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `order_id` int(11), `item_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (65.9ms)[0m   [0mCREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `price` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (74.4ms)[0m   [0mCREATE TABLE `orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `total_price` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (73.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (66.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (135.8ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (25.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101216054411')[0m
+  [4;35;1mSQL (25.1ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101203112952')[0m
+  [4;36;1mSQL (25.1ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101215134049')[0m
+  [4;35;1mSQL (25.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101209130425')[0m
+  [4;36;1mSQL (33.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101208100924')[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20101209090416')[0m
+  [4;36;1mSQL (33.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101203045415')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 12:04:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 06:34:49', `perishable_token` = 'G9cm5CXYNwuO8DmEswZx', `last_request_at` = '2010-12-16 06:34:49' WHERE `id` = 1[0m
+  [4;36;1mSQL (31.9ms)[0m   [0;1mCOMMIT[0m
+Completed in 62ms (View: 22, DB: 34) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#update_div (for 127.0.0.1 at 2010-12-16 14:06:03) [POST]
+  Parameters: {"action"=>"update_div", "controller"=>"items"}
+Rendered items/_update_partial (0.3ms)
+Completed in 5005ms (View: 5003, DB: 0) | 200 OK [http://localhost/update_div]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 14:06:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 08:36:11', `perishable_token` = 'jBtDN5I7o6sdWiOEkEl', `last_request_at` = '2010-12-16 08:36:11' WHERE `id` = 1[0m
+  [4;35;1mSQL (58.6ms)[0m   [0mCOMMIT[0m
+Completed in 143ms (View: 78, DB: 61) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 14:27:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 08:57:52', `perishable_token` = 'JZa0Qf0JB1yGmBjDDTp', `last_request_at` = '2010-12-16 08:57:52' WHERE `id` = 1[0m
+  [4;36;1mSQL (62.2ms)[0m   [0;1mCOMMIT[0m
+Completed in 91ms (View: 22, DB: 64) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 14:27:54) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items"}
+
+NameError (undefined local variable or method `falsh' for #<ItemsController:0xb6c6c3dc>):
+  app/controllers/items_controller.rb:38:in `selected_item'
+  haml (3.0.24) [v] rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#selected_item (for 127.0.0.1 at 2010-12-16 14:28:05) [GET]
+  Parameters: {"commit"=>"place order", "action"=>"selected_item", "controller"=>"items"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/selected_item?commit=place+order]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy_session (for 127.0.0.1 at 2010-12-16 14:28:05) [GET]
+  Parameters: {"action"=>"destroy_session", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 08:58:05', `perishable_token` = 'RrF9gzKFcBNU0znUUg8', `last_request_at` = '2010-12-16 08:58:05' WHERE `id` = 1[0m
+  [4;35;1mSQL (41.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 64ms (DB: 43) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-12-16 14:28:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 1) | 200 OK [http://localhost/user_session/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-12-16 14:28:12) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"amar"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'amar') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 08:58:12', `perishable_token` = 'wrMfovINtuNv11P8bb', `last_login_at` = '2010-12-16 05:29:42', `current_login_at` = '2010-12-16 08:58:12', `login_count` = 15, `last_request_at` = '2010-12-16 08:58:12' WHERE `id` = 1[0m
+  [4;35;1mSQL (49.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 73ms (DB: 52) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-12-16 14:28:12) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-12-16 08:58:12', `perishable_token` = 'po2V0OgdaEWwiqg7Bh21', `last_request_at` = '2010-12-16 08:58:12' WHERE `id` = 1[0m
+  [4;36;1mSQL (45.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/items
+Rendering users/show
+Completed in 74ms (View: 3, DB: 47) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-12-16 14:28:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"items"}
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-12-16 08:58:14', `perishable_token` = '2Ygn7268OOQqH4NN143', `last_request_at` = '2010-12-16 08:58:14' WHERE `id` = 1[0m
+  [4;35;1mSQL (30.8ms)[0m   [0mCOMMIT[0m
+Completed in 59ms (View: 21, DB: 33) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mOrder Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `total_price`, `updated_at`) VALUES('2010-12-16 11:14:41', NULL, '2010-12-16 11:14:41')[0m
+  [4;35;1mSQL (54.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItemOrder Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `item_orders`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItemOrder Create (0.2ms)[0m   [0;1mINSERT INTO `item_orders` (`created_at`, `order_id`, `updated_at`, `item_id`) VALUES('2010-12-16 11:14:59', NULL, '2010-12-16 11:14:59', NULL)[0m
+  [4;35;1mSQL (49.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mOrder Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mItem Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES(NULL, NULL, '2010-12-16 13:17:50', '2010-12-16 13:17:50')[0m
+  [4;35;1mSQL (39.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES('aaaaaaa', NULL, '2010-12-16 13:18:10', '2010-12-16 13:18:10')[0m
+  [4;36;1mSQL (47.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES('aaaaaaa', NULL, '2010-12-16 13:18:19', '2010-12-16 13:18:19')[0m
+  [4;35;1mSQL (40.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES('aaaaaaa', 'ddddddddd', '2010-12-16 13:19:29', '2010-12-16 13:19:29')[0m
+  [4;36;1mSQL (48.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES('aaaaaaa', 'ddddddddd', '2010-12-16 13:19:36', '2010-12-16 13:19:36')[0m
+  [4;35;1mSQL (34.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES('aaaaaaa', 'ddddddddd', '2010-12-16 13:19:41', '2010-12-16 13:19:41')[0m
+  [4;35;1mSQL (56.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES('aaaaaaa', 'ddddddddd', '2010-12-16 13:19:56', '2010-12-16 13:19:56')[0m
+  [4;36;1mSQL (36.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mItem Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (1.1ms)[0m   [0mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES('aaaaaaa', 'ddddddddd', '2010-12-16 13:20:08', '2010-12-16 13:20:08')[0m
+  [4;36;1mSQL (43.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.3ms)[0m   [0;1mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES('aaaaaaa', 'ddddddddd', '2010-12-16 13:20:51', '2010-12-16 13:20:51')[0m
+  [4;35;1mSQL (31.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES('aaaaaaa', 'ddddddddd', '2010-12-16 13:21:01', '2010-12-16 13:21:01')[0m
+  [4;35;1mSQL (62.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES('aaaaaaa', 'ddddddddd', '2010-12-16 13:21:26', '2010-12-16 13:21:26')[0m
+  [4;35;1mSQL (59.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.7ms)[0m   [0;1mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES('aaaaaaa', 'ddddddddd', '2010-12-16 13:21:44', '2010-12-16 13:21:44')[0m
+  [4;35;1mSQL (55.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES('aaaaaaa', 'ddddddddd', '2010-12-16 13:22:00', '2010-12-16 13:22:00')[0m
+  [4;36;1mSQL (35.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO `items` (`name`, `price`, `created_at`, `updated_at`) VALUES('aaaaaaa', 'ddddddddd', '2010-12-16 13:22:04', '2010-12-16 13:22:04')[0m
+  [4;36;1mSQL (76.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mItem Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20101203045415)
+Migrating to CreateCategories (20101203112952)
+Migrating to CreateOrders (20101208100924)
+Migrating to CreateComments (20101209090416)
+Migrating to CreateUsers (20101209130425)
+Migrating to CreateItemOrders (20101215134049)
+Migrating to RemoveColumnOrderDetailsFrom (20101216054411)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `item_orders`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `item_orders`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `item_orders`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `items`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `items`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `orders`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `orders`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m

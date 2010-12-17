@@ -8,7 +8,6 @@
 #update_div{:style=> "width:30px;height:40px;"}
 %br
 %br
-=link_to_remote("update_div", :update => "posts",:url => { :action => "update_div", :controller => "items"},:loading => "hide_div('loading_div');",:loaded => "show_div('loading_div')")
 -form_tag(selected_items_path, :method => 'get') do
     %table
     %tr
@@ -18,9 +17,10 @@
         %tr
         %br
         %td
-        %input{:type=>"checkbox", :name=>"item[]", :value=>"#{item.name}_#{item.price}"}
+        %input{:type=>"checkbox", :name=>"item[]", :value=>"#{item.name}_#{item.price}_#{item.id}"}
         %td=item.name
         %td=item.price
         %br
     =link_to "new items",new_item_path
     =submit_tag("place order")
+=link_to_remote("update_div", :update => "posts",:url => { :action => "update_div", :controller => "items"},:loading => "hide_div('loading_div');",:loaded => "show_div('loading_div')")

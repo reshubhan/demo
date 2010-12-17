@@ -16,20 +16,23 @@ class ItemsController < ApplicationController
       sleep 5
       page.replace_html "update_div" ,:partial => "update_partial"
     end
-
   end
 
 
   def selected_item
-    price=0
+    @price=0
     if params[:item]
       @selected_items={}
       params[:item].each do |item|
         item=item.split("_")
         @selected_items[item[0]]=item[1]
-        price =price+item[1].to_i
+        @price =@price+item[1].to_i
       end
-      Order.create(:orders_details => @selected_items.to_yaml ,:total_price =>price )
+      @order=Order.create(:total_price =>@price )
+      params[:item].each do |item|
+         item=item.split("_")
+        ItemOrder.create(:order_id => @order.id,:item_id => item[2])
+      end
       @selected_items
     else
       redirect_to(root_path)
