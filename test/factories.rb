@@ -24,18 +24,17 @@ Factory.define(:order) do |u|
 end
 
 
-Factory.define(:orders_with_items, :parent => :order) do |u|
-  u.after_create do |o|
-    o.items = [Factory.build(:item, :order => o), Factory.build(:item, :order => o)]
+Factory.define(:item_order) do |f|
+  f.association :order
+  f.items {|items| [items.association(:item), items.association(:item1)]}
   end
-end
 
-Factory.define(:item) do |i|
-  i.name "red1"
-  i.price "29"
-end
-
-Factory.define(:item_with_order, :parent => :order) do |i|
-  i.association(:order)
-end
+#Factory.define(:item) do |i|
+#  i.name "red1"
+#  i.price "29"
+#end
+#
+#Factory.define(:item_with_order, :parent => :order) do |i|
+#  i.association(:order)
+#end
 
