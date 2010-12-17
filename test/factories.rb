@@ -19,22 +19,26 @@ Factory.define :category do |f|
   f.name "amar"
 end
 
-Factory.define(:order) do |u|
-  u.total_price 29
+Factory.define(:user) do |u|
+  u.name "foo"
 end
 
-
-Factory.define(:item_order) do |f|
-  f.association :order
-  f.items {|items| [items.association(:item), items.association(:item1)]}
+Factory.define(:user_with_items, :parent => :user) do |u|
+  u.after_build do |o|
+    o.items = [Factory.build(:item, :user => o), Factory.build(:item, :user => o)]
   end
+end
 
-#Factory.define(:item) do |i|
-#  i.name "red1"
-#  i.price "29"
-#end
-#
-#Factory.define(:item_with_order, :parent => :order) do |i|
-#  i.association(:order)
-#end
+Factory.define(:item) do |i|
+  i.color "red"
+end
+
+Factory.define(:item_with_user, :parent => :user) do |i|
+  i.association(:user)
+end
+
+# Run
+#user = Factory(:user_with_items)
+#user.items(true) # Shows the two saved items
+
 
