@@ -19,22 +19,18 @@ Factory.define :category do |f|
   f.name "amar"
 end
 
-Factory.define(:user) do |u|
-  u.name "foo"
+Factory.define(:order) do |u|
+  u.total_price "22"
 end
 
-Factory.define(:user_with_items, :parent => :user) do |u|
+Factory.define(:user_with_items, :parent => :order) do |u|
   u.after_build do |o|
-    o.items = [Factory.build(:item, :user => o), Factory.build(:item, :user => o)]
+    o.items = [Factory.build(:item, :order => o), Factory.build(:item1, :order => o)]
   end
 end
 
-Factory.define(:item) do |i|
-  i.color "red"
-end
-
-Factory.define(:item_with_user, :parent => :user) do |i|
-  i.association(:user)
+Factory.define(:item_with_order, :parent => :order) do |i|
+  i.association(:order)
 end
 
 # Run
