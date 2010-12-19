@@ -1,4 +1,7 @@
 require "faker"
+require "factory_girl"
+
+
 Factory.define :item do |f|
 	f.name "Apple"
   f.price "22"
@@ -23,15 +26,21 @@ Factory.define(:order) do |u|
   u.total_price "22"
 end
 
-Factory.define(:user_with_items, :parent => :order) do |u|
-  u.after_build do |o|
-    o.items = [Factory.build(:item, :order => o), Factory.build(:item1, :order => o)]
-  end
+
+Factory.define :item_order  do |u|
+    u.association :order,:factory => :order
+   #u.association       :item
 end
 
-Factory.define(:item_with_order, :parent => :order) do |i|
-  i.association(:order)
-end
+#Factory.define(:item_order, :parent => :order) do |u|
+#  u.after_build do |o|
+#    o.items = [Factory.build(:item, :order => o), Factory.build(:item1, :order => o)]
+#  end
+#end
+
+#Factory.define(:item_with_order, :parent => :order) do |i|
+#  i.association(:order)
+#end
 
 # Run
 #user = Factory(:user_with_items)
