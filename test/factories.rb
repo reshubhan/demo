@@ -24,13 +24,18 @@ end
 
 Factory.define(:order) do |u|
   u.total_price "22"
+   u.item_orders {|groups| [groups.association(:item_order)]}
 end
 
 
 Factory.define :item_order  do |u|
-    u.association :order
+   # u.association :order
     u.item_id      Factory.create(:item).id
 end
+
+
+
+
 
 #Factory.define(:item_order, :parent => :order) do |u|
 #  u.after_build do |o|
