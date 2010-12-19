@@ -28,8 +28,8 @@ end
 
 
 Factory.define :item_order  do |u|
-    u.association :order,:factory => :order
-   #u.association       :item
+    u.association :order
+    u.item_id      Factory.create(:item).id
 end
 
 #Factory.define(:item_order, :parent => :order) do |u|
